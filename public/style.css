@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+    --default-font: "Roboto", " Open Sans";
+}
+
+* {
+    font-family: "Roboto";
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-primary {
+    background-color: rgb(21, 82, 135);
+    border-color: rgb(21, 82, 135);
+    transition: 0.2s ease-in-out opacity;
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+    background-color: rgb(21, 82, 135);
+}
+
+.btn-outline-primary {
+    color: rgb(21, 82, 135);
+    border-color: rgb(21, 82, 135);
+    transition: 0.2s ease-in-out background-color;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: rgb(21, 82, 135);
+    border-color: rgb(21, 82, 135);
+}
+
+.btn-success {
+    background-color: rgb(4, 74, 7);
+    border-color: rgb(4, 74, 7);
+    transition: 0.2s ease-in-out opacity;
+}
+
+.btn-success:hover {
+    background-color: rgb(4, 74, 7);
+    opacity: 0.8;
+}
+
+.btn-outline-danger {
+    color: rgb(249, 8, 8);
+    border-color: rgb(249, 8, 8);
+    transition: 0.2s ease-in-out background-color;
+}
+
+.btn-outline-danger:hover {
+    color: white;
+    border-color: rgb(249, 8, 8);
+}
+
+.card {
+    border: 1px solid rgba(141, 141, 141, 0.21);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 32px;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+.form-control {
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.form-control:hover {
+    border: 1px solid rgba(21, 82, 135, 0.524);
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(21, 82, 135);
+}
+
+.form-check-input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    box-shadow: none;
+}
+
+.form-check-input[type="checkbox"]:checked {
+    background-color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+}
+.form-check-input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    box-shadow: none;
+}
+
+.form-check-input[type="radio"]:checked {
+    background-color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+}
+
+.nav_logo {
+    max-width: 80px;
+}
+.slug-card:hover {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.slug-card:hover {
+    opacity: 0.7;
+}
