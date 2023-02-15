@@ -19,3 +19,9 @@ use App\Http\Controllers\CartController;
 */
 Route::get('/',[MainController::class,'index'])->name('home');
 
+Route::middleware('guest')->group(function(){
+    Route::get('/register',[AuthController::class,'registerShow'])->name('registerShow');
+    Route::post('/register_process',[AuthController::class,'register'])->name('register_process');
+    Route::get('/login',[AuthController::class,'loginShow'])->name('loginShow');
+    Route::post('/login_process',[AuthController::class,'login'])->name('login_process');
+});
