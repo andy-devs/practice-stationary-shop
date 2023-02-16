@@ -25,3 +25,11 @@ Route::middleware('guest')->group(function(){
     Route::get('/login',[AuthController::class,'loginShow'])->name('loginShow');
     Route::post('/login_process',[AuthController::class,'login'])->name('login_process');
 });
+
+Route::get('/cart/{id}',[CartController::class,'addToCart'])->name('addToCart');
+Route::get('/cart',[CartController::class,'index'])->name('cartPage');
+Route::get('/cart/{id}/delete',[CartController::class,'deleteFromCart'])->name('deleteFromCart');
+
+Route::get('/catalog', [CategoryController::class,'index'])->name('catalog');
+Route::get('{category_slug}/products/', [ProductController::class,'index'])->name('products');
+Route::get('/catalog/{id}', [ProductController::class,'show'])->name('detail');
