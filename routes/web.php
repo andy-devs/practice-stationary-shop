@@ -26,6 +26,9 @@ Route::middleware('guest')->group(function(){
     Route::post('/login_process',[AuthController::class,'login'])->name('login_process');
 });
 
+Route::get('/search',[MainController::class,'search'])->name('search');
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+
 Route::get('/cart/{id}',[CartController::class,'addToCart'])->name('addToCart');
 Route::get('/cart',[CartController::class,'index'])->name('cartPage');
 Route::get('/cart/{id}/delete',[CartController::class,'deleteFromCart'])->name('deleteFromCart');
@@ -33,3 +36,12 @@ Route::get('/cart/{id}/delete',[CartController::class,'deleteFromCart'])->name('
 Route::get('/catalog', [CategoryController::class,'index'])->name('catalog');
 Route::get('{category_slug}/products/', [ProductController::class,'index'])->name('products');
 Route::get('/catalog/{id}', [ProductController::class,'show'])->name('detail');
+
+Route::middleware('admin')->prefix('admin/')->group(function() {
+    Route::get('/', [AdminController::class,'index'])->name('admin');
+    Route::get('/product/{product}/edit', [AdminController::class,'edit'])->name('edit');
+    Route::put('/product/{product}', [AdminController::class,'update'])->name('update');
+    Route::get('/product/create', [AdminController::class,'create'])->name('create');
+    Route::post('/product/store',  [AdminController::class,'store'])->name('store');
+    Route::get('/product/{id}/delete',  [AdminController::class,'destroy'])->name('destroy');
+});
