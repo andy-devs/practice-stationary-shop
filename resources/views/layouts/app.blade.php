@@ -28,6 +28,11 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ asset('catalog') }}">Продукция и услуги</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-company') }}">О компании</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('company-standarts') }}">Стандарты качества</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('clients-and-partners') }}">Клиентам и партнерам</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('work-in-company') }}">Работа в компании</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('contacts') }}">Контакты</a></li>
                         @auth
                         <li><a class="dropdown-item" href="{{ route('cartPage') }}">Корзина</a></li>
                         @endauth
@@ -54,7 +59,7 @@
             </div>
           </nav>
     </header>
-    <main>
+    <main style="min-height: 100vh;">
         <div class="container">
             @if ($errors->any())
             <div class="alert alert-danger">
@@ -66,8 +71,101 @@
             @yield('content')
         </div>
     </main>
-    <footer>
-    </footer>
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-2">
+    <!-- Left -->
+   
+    <!-- Right --> 
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Канцелярские товары
+          </h6>
+          <p>
+            Наша канцелярская компания предоставляет лучше канцелярские услуги и самый широкий выбор канцелярских товаров на любой вкус. Здесь вы всегда найдете многообразие товаров, будь то краски, картины по номерам, ручки и карандаши.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Разделы
+          </h6>
+          <p>
+            <a class="text-reset" href="{{ asset('catalog') }}">Продукция и услуги</a>
+          </p>
+          <p>
+            <a class="text-reset" href="{{ route('about-company') }}">О компании</a>
+          </p>
+          <p>
+            <a class="text-reset" href="{{ asset('company-standarts') }}">Стандарты качества</a>
+          </p>
+          <p>
+            <a class="text-reset" href="{{ asset('clients-and-partners') }}">Клиентам и партнерам</a>
+          </p>
+          <p>
+            <a class="text-reset" href="{{ asset('work-in-company') }}">Работа в компании</a>
+          </p>
+          <p>
+            <a class="text-reset" href="{{ asset('contacts') }}">Контакты</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Мы в социальных сетях
+          </h6>
+          <p>
+            <a class="text-reset" href="">В Контакте</a>
+          </p>
+          <p>
+            <a class="text-reset" href="">Facebook</a>
+          </p>
+          <p>
+            <a class="text-reset" href="">Одноклассники</a>
+          </p>
+          <p>
+            <a class="text-reset" href="">What's Upp</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Юридическая информация</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i>Булвар Архитекторов, 35</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+</footer>
     <script src="{{ asset('js/jquery-3.6.3.min.js') }}"></script>
 </body>
 </html>

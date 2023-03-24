@@ -17,6 +17,7 @@ class AuthController extends Controller
         $data = $request->validate([
             'email'     => 'required|max:255|unique:users',
             'password'  => 'required|confirmed',
+            'is_legal_entity' => 'nullable',
             'rules'     => 'accepted'
         ]);
 

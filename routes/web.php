@@ -18,6 +18,11 @@ use App\Http\Controllers\CartController;
 |
 */
 Route::get('/',[MainController::class,'index'])->name('home');
+Route::get('/about-company',[MainController::class,'aboutCompany'])->name('about-company');
+Route::get('/company-standarts',[MainController::class,'companyStandarts'])->name('company-standarts');
+Route::get('/clients-and-partners',[MainController::class,'clientsAndPartners'])->name('clients-and-partners');
+Route::get('/work-in-company',[MainController::class,'workInCompany'])->name('work-in-company');
+Route::get('/contacts',[MainController::class,'contacts'])->name('contacts');
 
 Route::middleware('guest')->group(function(){
     Route::get('/register',[AuthController::class,'registerShow'])->name('registerShow');
@@ -45,3 +50,4 @@ Route::middleware('admin')->prefix('admin/')->group(function() {
     Route::post('/product/store',  [AdminController::class,'store'])->name('store');
     Route::get('/product/{id}/delete',  [AdminController::class,'destroy'])->name('destroy');
 });
+
